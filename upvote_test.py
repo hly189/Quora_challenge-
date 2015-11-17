@@ -41,8 +41,14 @@ def subrange(upvote):
 	return non_decreasing - non_increasing
 
 
-(n, k) = map(int, raw_input().split())
-upvote = map(int, raw_input().split())
+def mapping(fn, lst): 
+	new_array = []
+	for i in lst: 
+		new_array.append(fn(i))
+	return new_array
+
+(n, k) = mapping(int, raw_input().split())
+upvote = mapping(int, raw_input().split())
 
 i = 0
 while i < (n-k+1): 
